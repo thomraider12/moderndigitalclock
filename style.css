@@ -66,7 +66,7 @@ body {
   bottom: 1px;
   width: 48%;
   left: 50%;
- background-color: rgba(255,255,255,0.27);
+  background-color: rgba(255,255,255,0.27);
   padding: 8px;
   color: white;
   font-size: 18px;
@@ -77,6 +77,13 @@ body {
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.alarm-clock .date .time-zone {
+  /* Nova regra para o elemento "Horário de" */
+  font-family: "Jost", sans-serif;
+  font-size: 16px; /* Ajuste o tamanho da fonte se necessário */
+  margin-right: 5px; /* Adiciona um espaçamento à direita */
 }
 .alarm-clock .time {
   position: relative;
