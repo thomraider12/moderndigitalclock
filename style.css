@@ -79,12 +79,6 @@ body {
   border-top-right-radius: 10px;
 }
 
-.alarm-clock .date .time-zone {
-  /* Nova regra para o elemento "Horário de" */
-  font-family: "Jost", sans-serif;
-  font-size: 16px; /* Ajuste o tamanho da fonte se necessário */
-  margin-right: 5px; /* Adiciona um espaçamento à direita */
-}
 .alarm-clock .time {
   position: relative;
   display: flex;
@@ -140,4 +134,24 @@ body {
 .day, .month, .year {
   font-family: 'Jost', sans-serif;
   font-style: normal;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.comma {
+  font-family: "Jost";
 }
