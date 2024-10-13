@@ -45,4 +45,4 @@ function setDate() {
   year.innerHTML = yyyy;
 }
 
-setInterval(setDate, 500);
+setInterval(setDate, 1000);
