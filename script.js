@@ -1,3 +1,5 @@
+const timeZone = document.querySelector('.time-zone');
+
 const hours = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
@@ -44,5 +46,22 @@ function setDate() {
   month.innerHTML = monthName[mm];
   year.innerHTML = yyyy;
 }
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    timeZone.innerHTML = "Horário Desconhecido"; // Caso a localização não seja obtida
+  }
+}
+
+function showPosition(position) {
+  // Código para recuperar a cidade a partir da latitude e longitude (necessita de API externa)
+  // Exemplo simplificado, substitua pela lógica para obter a cidade
+  const city = "Lisboa"; // Substitua por cidade obtida
+  timeZone.innerHTML = `Horário de ${city}`;
+}
+
+getLocation();
 
 setInterval(setDate, 1000);
